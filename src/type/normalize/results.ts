@@ -1,5 +1,5 @@
-import NormalizeResult from './result';
+import Result from '../result';
 
-export default interface NormalizedResult {
-  [lid: string]: NormalizeResult[];
+export default interface NormalizedResults {
+  [league: string]: { [team: string]: Result };
 }

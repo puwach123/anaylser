@@ -1,6 +1,6 @@
 export default interface Result {
-  tid: number;
-  name: string;
+  team: string;
+  league: string;
   win: number;
   draw: number;
   lose: number;
