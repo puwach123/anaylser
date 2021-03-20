@@ -1,4 +1,3 @@
-import Match from '../type/match';
 import NormalizedMatches from '../type/normalize/matches';
 
 export default class Filter {
