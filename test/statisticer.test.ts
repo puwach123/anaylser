@@ -1,9 +1,8 @@
 import NormalizedMatches from '../src/type/normalize/matches';
 import NormalizedResults from '../src/type/normalize/results';
-import getHandicapRes from '../src/func/gethandicapres';
-import getHiLoRes from '../src/func/gethilores';
+import Statisticer from '../src/statisticer/statisticer';
 
-const getTestData = (): NormalizedMatches => ({
+const nmatches: NormalizedMatches = {
   意甲: {
     AC米蘭: [
       {
@@ -305,11 +304,10 @@ const getTestData = (): NormalizedMatches => ({
       },
     ],
   },
-});
+};
 
 describe('test get handicap result', () => {
-  test('it should be ok', () => {
-    const idata: NormalizedMatches = getTestData();
+  it('cal all matches', () => {
     const expected: NormalizedResults = {
       意甲: {
         AC米蘭: {
@@ -321,14 +319,13 @@ describe('test get handicap result', () => {
         },
       },
     };
-    const actual: NormalizedResults = getHandicapRes(idata);
+    const actual: NormalizedResults = Statisticer.getHandicapRes(nmatches);
     expect(actual).toEqual(expected);
   });
 });
 
 describe('test get hilo result', () => {
-  test('it should be ok', () => {
-    const idata: NormalizedMatches = getTestData();
+  it('cal all matches', () => {
     const expected: NormalizedResults = {
       意甲: {
         AC米蘭: {
@@ -340,7 +337,7 @@ describe('test get hilo result', () => {
         },
       },
     };
-    const actual: NormalizedResults = getHiLoRes(idata);
+    const actual: NormalizedResults = Statisticer.getHiLoRes(nmatches);
     expect(actual).toEqual(expected);
   });
 });

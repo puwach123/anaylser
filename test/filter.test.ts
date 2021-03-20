@@ -1,0 +1,308 @@
+import Filter from '../src/filter/filter';
+import NormalizedMatches from '../src/type/normalize/matches';
+
+const nmatches: NormalizedMatches = {
+  意甲: {
+    AC米蘭: [
+      {
+        league: '意甲',
+        time: '2020-11-29',
+        host: 'AC米蘭',
+        away: '費倫天拿',
+        full: '2-0',
+        half: '2-0',
+        handicap: '贏[-0.5/1]',
+        hilo: '小[2.5/3]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-11-23',
+        host: '拿玻里',
+        away: 'AC米蘭',
+        full: '1-3',
+        half: '0-1',
+        handicap: '贏[+0/0.5]',
+        hilo: '大[2.5]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-11-09',
+        host: 'AC米蘭',
+        away: '維羅納',
+        full: '2-2',
+        half: '1-2',
+        handicap: '輸[-1.5]',
+        hilo: '大[3/3.5]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-11-01',
+        host: '烏甸尼斯',
+        away: 'AC米蘭',
+        full: '1-2',
+        half: '0-1',
+        handicap: '贏[-0.5]',
+        hilo: '大[2.5]',
+        oddeven: '單',
+      },
+      {
+        league: '意甲',
+        time: '2020-10-27',
+        host: 'AC米蘭',
+        away: '羅馬',
+        full: '3-3',
+        half: '1-1',
+        handicap: '輸[-0/0.5]',
+        hilo: '大[3/3.5]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-10-18',
+        host: '國際米蘭',
+        away: 'AC米蘭',
+        full: '1-2',
+        half: '1-2',
+        handicap: '贏[+0.5]',
+        hilo: '走[3]',
+        oddeven: '單',
+      },
+      {
+        league: '意甲',
+        time: '2020-10-05',
+        host: 'AC米蘭',
+        away: '史柏斯亞',
+        full: '3-0',
+        half: '0-0',
+        handicap: '贏[-1/1.5]',
+        hilo: '大[2.5/3]',
+        oddeven: '單',
+      },
+      {
+        league: '意甲',
+        time: '2020-09-28',
+        host: '克羅托內',
+        away: 'AC米蘭',
+        full: '0-2',
+        half: '0-1',
+        handicap: '贏[-1]',
+        hilo: '小[2.5]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-09-22',
+        host: 'AC米蘭',
+        away: '博洛尼亞',
+        full: '2-0',
+        half: '1-0',
+        handicap: '贏[-1/1.5]',
+        hilo: '小[3]',
+        oddeven: '雙',
+      },
+    ],
+  },
+};
+const nhosts: NormalizedMatches = {
+  意甲: {
+    AC米蘭: [
+      {
+        league: '意甲',
+        time: '2020-11-29',
+        host: 'AC米蘭',
+        away: '費倫天拿',
+        full: '2-0',
+        half: '2-0',
+        handicap: '贏[-0.5/1]',
+        hilo: '小[2.5/3]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-11-09',
+        host: 'AC米蘭',
+        away: '維羅納',
+        full: '2-2',
+        half: '1-2',
+        handicap: '輸[-1.5]',
+        hilo: '大[3/3.5]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-10-27',
+        host: 'AC米蘭',
+        away: '羅馬',
+        full: '3-3',
+        half: '1-1',
+        handicap: '輸[-0/0.5]',
+        hilo: '大[3/3.5]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-10-05',
+        host: 'AC米蘭',
+        away: '史柏斯亞',
+        full: '3-0',
+        half: '0-0',
+        handicap: '贏[-1/1.5]',
+        hilo: '大[2.5/3]',
+        oddeven: '單',
+      },
+      {
+        league: '意甲',
+        time: '2020-09-22',
+        host: 'AC米蘭',
+        away: '博洛尼亞',
+        full: '2-0',
+        half: '1-0',
+        handicap: '贏[-1/1.5]',
+        hilo: '小[3]',
+        oddeven: '雙',
+      },
+    ],
+  },
+};
+const naways: NormalizedMatches = {
+  意甲: {
+    AC米蘭: [
+      {
+        league: '意甲',
+        time: '2020-11-23',
+        host: '拿玻里',
+        away: 'AC米蘭',
+        full: '1-3',
+        half: '0-1',
+        handicap: '贏[+0/0.5]',
+        hilo: '大[2.5]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-11-01',
+        host: '烏甸尼斯',
+        away: 'AC米蘭',
+        full: '1-2',
+        half: '0-1',
+        handicap: '贏[-0.5]',
+        hilo: '大[2.5]',
+        oddeven: '單',
+      },
+      {
+        league: '意甲',
+        time: '2020-10-18',
+        host: '國際米蘭',
+        away: 'AC米蘭',
+        full: '1-2',
+        half: '1-2',
+        handicap: '贏[+0.5]',
+        hilo: '走[3]',
+        oddeven: '單',
+      },
+      {
+        league: '意甲',
+        time: '2020-09-28',
+        host: '克羅托內',
+        away: 'AC米蘭',
+        full: '0-2',
+        half: '0-1',
+        handicap: '贏[-1]',
+        hilo: '小[2.5]',
+        oddeven: '雙',
+      },
+    ],
+  },
+};
+const nlastsix: NormalizedMatches = {
+  意甲: {
+    AC米蘭: [
+      {
+        league: '意甲',
+        time: '2020-11-29',
+        host: 'AC米蘭',
+        away: '費倫天拿',
+        full: '2-0',
+        half: '2-0',
+        handicap: '贏[-0.5/1]',
+        hilo: '小[2.5/3]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-11-23',
+        host: '拿玻里',
+        away: 'AC米蘭',
+        full: '1-3',
+        half: '0-1',
+        handicap: '贏[+0/0.5]',
+        hilo: '大[2.5]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-11-09',
+        host: 'AC米蘭',
+        away: '維羅納',
+        full: '2-2',
+        half: '1-2',
+        handicap: '輸[-1.5]',
+        hilo: '大[3/3.5]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-11-01',
+        host: '烏甸尼斯',
+        away: 'AC米蘭',
+        full: '1-2',
+        half: '0-1',
+        handicap: '贏[-0.5]',
+        hilo: '大[2.5]',
+        oddeven: '單',
+      },
+      {
+        league: '意甲',
+        time: '2020-10-27',
+        host: 'AC米蘭',
+        away: '羅馬',
+        full: '3-3',
+        half: '1-1',
+        handicap: '輸[-0/0.5]',
+        hilo: '大[3/3.5]',
+        oddeven: '雙',
+      },
+      {
+        league: '意甲',
+        time: '2020-10-18',
+        host: '國際米蘭',
+        away: 'AC米蘭',
+        full: '1-2',
+        half: '1-2',
+        handicap: '贏[+0.5]',
+        hilo: '走[3]',
+        oddeven: '單',
+      },
+    ],
+  },
+};
+
+describe('test filter', () => {
+  it('should only contain host', () => {
+    const actual: NormalizedMatches = Filter.onlyHost(nmatches);
+    expect(actual).toEqual(nhosts);
+  });
+
+  it('should only contain away', () => {
+    const actual: NormalizedMatches = Filter.onlyAway(nmatches);
+    expect(actual).toEqual(naways);
+  });
+
+  it('should only contain last six matches', () => {
+    const actual: NormalizedMatches = Filter.lastSix(nmatches);
+    expect(actual).toEqual(nlastsix);
+  });
+});
