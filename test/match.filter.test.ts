@@ -1,4 +1,4 @@
-import Filter from '../src/filter/filter';
+import MatchFilter from '../src/filter/match';
 import NormalizedMatches from '../src/type/normalize/matches';
 
 const nmatches: NormalizedMatches = {
@@ -290,19 +290,19 @@ const nlastsix: NormalizedMatches = {
   },
 };
 
-describe('test filter', () => {
+describe('test match filter', () => {
   it('should only contain host', () => {
-    const actual: NormalizedMatches = Filter.onlyHost(nmatches);
+    const actual: NormalizedMatches = MatchFilter.ONLYHOST(nmatches);
     expect(actual).toEqual(nhosts);
   });
 
   it('should only contain away', () => {
-    const actual: NormalizedMatches = Filter.onlyAway(nmatches);
+    const actual: NormalizedMatches = MatchFilter.ONLYAWAY(nmatches);
     expect(actual).toEqual(naways);
   });
 
   it('should only contain last six matches', () => {
-    const actual: NormalizedMatches = Filter.lastSix(nmatches);
+    const actual: NormalizedMatches = MatchFilter.LASTSIX(nmatches);
     expect(actual).toEqual(nlastsix);
   });
 });

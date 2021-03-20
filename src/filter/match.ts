@@ -1,7 +1,7 @@
 import NormalizedMatches from '../type/normalize/matches';
 
-export default class Filter {
-  public static onlyHost(nmatches: NormalizedMatches): NormalizedMatches {
+export default class MatchFilter {
+  public static ONLYHOST(nmatches: NormalizedMatches): NormalizedMatches {
     const nhosts: NormalizedMatches = {};
     for (const league in nmatches) {
       nhosts[league] = {};
@@ -14,7 +14,7 @@ export default class Filter {
     return nhosts;
   }
 
-  public static onlyAway(nmatches: NormalizedMatches): NormalizedMatches {
+  public static ONLYAWAY(nmatches: NormalizedMatches): NormalizedMatches {
     const naways: NormalizedMatches = {};
     for (const league in nmatches) {
       naways[league] = {};
@@ -27,7 +27,7 @@ export default class Filter {
     return naways;
   }
 
-  public static lastSix(nmatches: NormalizedMatches): NormalizedMatches {
+  public static LASTSIX(nmatches: NormalizedMatches): NormalizedMatches {
     const nlastsix: NormalizedMatches = {};
     for (const league in nmatches) {
       nlastsix[league] = {};

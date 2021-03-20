@@ -32,7 +32,7 @@ export default class Statisticer {
     return results;
   }
 
-  public static getHandicapRes = (
+  public static GETHANDICAPRES = (
     nmatches: NormalizedMatches
   ): NormalizedResults =>
     Statisticer.analysis(nmatches, matches => {
@@ -62,7 +62,7 @@ export default class Statisticer {
       return result;
     });
 
-  public static getHiLoRes = (nmatches: NormalizedMatches): NormalizedResults =>
+  public static GETHILORES = (nmatches: NormalizedMatches): NormalizedResults =>
     Statisticer.analysis(nmatches, matches => {
       const result: Result = {
         team: '',

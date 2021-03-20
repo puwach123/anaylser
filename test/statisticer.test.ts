@@ -319,7 +319,7 @@ describe('test get handicap result', () => {
         },
       },
     };
-    const actual: NormalizedResults = Statisticer.getHandicapRes(nmatches);
+    const actual: NormalizedResults = Statisticer.GETHANDICAPRES(nmatches);
     expect(actual).toEqual(expected);
   });
 });
@@ -337,7 +337,7 @@ describe('test get hilo result', () => {
         },
       },
     };
-    const actual: NormalizedResults = Statisticer.getHiLoRes(nmatches);
+    const actual: NormalizedResults = Statisticer.GETHILORES(nmatches);
     expect(actual).toEqual(expected);
   });
 });
